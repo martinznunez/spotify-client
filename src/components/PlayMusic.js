@@ -1,6 +1,7 @@
 import React from "react";
 
 import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const ContainerIconPlay = styled.div`
   width: 100%;
@@ -15,11 +16,15 @@ const ContainerIconPlay = styled.div`
   }
 `;
 
-const PlayMusic = () => {
+const PlayMusic = ({ faPlayCircle }) => {
   return (
     <>
       <ContainerIconPlay>
-        <img src="/assets/play1.png" alt="" />
+        <FontAwesomeIcon
+          icon={faPlayCircle}
+          size="2x"
+          style={{ color: "#fff" }}
+        />
       </ContainerIconPlay>
     </>
   );

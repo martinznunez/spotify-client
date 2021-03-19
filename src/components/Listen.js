@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const ContainerIconListe = styled.div`
   width: 100%;
   display: flex;
@@ -12,11 +12,15 @@ const ContainerIconListe = styled.div`
     width: 50px;
   }
 `;
-const Listen = () => {
+const Listen = ({ faHeadphonesAlt }) => {
   return (
     <>
       <ContainerIconListe>
-        <img src="/assets/listen.png" alt="" />
+        <FontAwesomeIcon
+          icon={faHeadphonesAlt}
+          size="2x"
+          style={{ color: "#fff" }}
+        />
       </ContainerIconListe>
     </>
   );

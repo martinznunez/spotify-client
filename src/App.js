@@ -5,8 +5,7 @@ const ContainerGeneral = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
-
-  height: 1000px;
+  height: 950px;
 `;
 
 const ContainerSidebar = styled.div`

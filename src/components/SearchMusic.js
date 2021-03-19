@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const ContainerIconSearch = styled.div`
   width: 100%;
@@ -7,16 +8,12 @@ const ContainerIconSearch = styled.div`
   align-items: center;
   justify-content: center;
   padding-top: 25%;
-
-  img {
-    width: 45px;
-  }
 `;
-const SearchMusic = () => {
+const SearchMusic = ({ faSearch }) => {
   return (
     <>
       <ContainerIconSearch>
-        <img src="/assets/search.png" alt="" />
+        <FontAwesomeIcon icon={faSearch} size="2x" style={{ color: "#fff" }} />
       </ContainerIconSearch>
     </>
   );

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const ContainerIconFavourite = styled.div`
   width: 100%;
@@ -13,11 +14,11 @@ const ContainerIconFavourite = styled.div`
     border-radius: 50%;
   }
 `;
-const FavouriteMusic = () => {
+const FavouriteMusic = ({ faHeart }) => {
   return (
     <>
       <ContainerIconFavourite>
-        <img src="/assets/corazon2.png" alt="" />
+        <FontAwesomeIcon icon={faHeart} size="2x" style={{ color: "#fff" }} />
       </ContainerIconFavourite>
     </>
   );

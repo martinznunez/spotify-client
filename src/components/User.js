@@ -3,10 +3,12 @@ import styled from "styled-components";
 
 const ContainerImgUser = styled.div`
   width: 100%;
+  height: 150px;
   display: flex;
+  margin-top: 0px;
+  margin-bottom: 40px;
   align-items: center;
   justify-content: center;
-  padding-top: 15%;
 
   img {
     width: 50px;

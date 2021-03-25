@@ -1,32 +1,15 @@
-import styled from "styled-components";
-import Sedebar from "./components/Sidebar";
+import React from "react";
+import Routes from "./components/Routes";
 
-const ContainerGeneral = styled.div`
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 950px;
-`;
-
-const ContainerSidebar = styled.div`
-  width: 30%;
-  background-color: #1155cc;
-`;
-
-const ContainerHader = styled.div`
-  width: 70%;
-`;
+import UserProvider from "./context/UserContext";
 
 function App() {
   return (
-    <ContainerGeneral>
-      <ContainerSidebar>
-        <Sedebar />
-      </ContainerSidebar>
-      <ContainerHader>
-        <header></header>
-      </ContainerHader>
-    </ContainerGeneral>
+    <>
+      <UserProvider>
+        <Routes />
+      </UserProvider>
+    </>
   );
 }
 

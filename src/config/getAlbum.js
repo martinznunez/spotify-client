@@ -1,7 +1,9 @@
 import axios from "axios";
 
+import { getLocalStorage } from "../utils/LocalStotage";
+
 export const fetchAlbumsReleases = () => {
-  let tokenLs = JSON.parse(localStorage.getItem("data"));
+  const { tokenLs } = getLocalStorage();
 
   return axios.get("	https://api.spotify.com/v1/browse/new-releases", {
     headers: {

@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
+
 import { UserContext } from "../context/UserContext";
 
 const ContainerFavourite = styled.div`
@@ -36,7 +37,6 @@ const Card = styled.div`
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 10%;
-    cursor: pointer;
   }
   span {
     position: absolute;
@@ -58,9 +58,9 @@ const FavouriteToStock = () => {
     <>
       <ContainerFavourite>
         {listFavourite
-          ? listFavourite.map((list) => (
+          ? listFavourite.map((list, index) => (
               <>
-                <Card title={list.name} key={list.id}>
+                <Card title={list.name} key={list.index}>
                   <p> {list.name} </p>
                   <span>
                     <FontAwesomeIcon
@@ -77,6 +77,7 @@ const FavouriteToStock = () => {
                       }}
                     />
                   </span>
+
                   {list.images ? (
                     <img src={list.images[0].url} alt="" />
                   ) : (

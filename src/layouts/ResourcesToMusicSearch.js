@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import FavouriteMusicIcon from "./FavouriteMusicIcon";
+import FeatureToAddMusic from "./FeatureToAddMusic";
 
 const Card = styled.div`
   width: 100%;
@@ -35,14 +36,24 @@ const ContainerIconFavourite = styled.div`
   margin-left: 35%;
   margin-top: 34%;
 `;
-const ResourcesToMusicSearch = (musicSearch) => {
+
+const ContainerIconPlay = styled.div`
+  position: absolute;
+  margin-top: 20%;
+`;
+
+const ResourcesToMusicSearch = ({ musicSearch }) => {
   return (
     <>
-      {musicSearch.musicSearch
-        ? musicSearch.musicSearch.map((music) => (
+      {musicSearch
+        ? musicSearch.map((music) => (
             <Card key={music.album.id}>
               <p> {music.album.name} </p>
+              <ContainerIconPlay>
+                <FeatureToAddMusic data={music} />
+              </ContainerIconPlay>
               <img src={music.album.images[0].url} alt="" />
+
               <ContainerIconFavourite>
                 <FavouriteMusicIcon data={music} />
               </ContainerIconFavourite>

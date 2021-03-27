@@ -1,14 +1,21 @@
 import React, { createContext, useState } from "react";
-// import { useHistory } from "react-router-dom";
 
 export const UserContext = createContext();
 
 const UserProvider = (props) => {
-  //   const history = useHistory();
+  const [searchClue, setSearchClue] = useState([
+    {
+      name: null,
+      audio: null,
+    },
+  ]);
+
   const [listFavourite, setListFavourite] = useState([]);
 
   return (
-    <UserContext.Provider value={{ setListFavourite, listFavourite }}>
+    <UserContext.Provider
+      value={{ setListFavourite, listFavourite, searchClue, setSearchClue }}
+    >
       {props.children}
     </UserContext.Provider>
   );

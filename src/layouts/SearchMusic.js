@@ -3,7 +3,7 @@ import { useState } from "react/cjs/react.development";
 import styled from "styled-components";
 import { fetchMusic } from "../config/getMusic";
 
-import ResourcesToMusicSearch from "../layouts/ResourcesToMusicSearch";
+import ResourcesToMusicSearch from "./ResourcesToMusicSearch";
 
 const ContainerPrimary = styled.div`
   display: flex;
@@ -28,7 +28,7 @@ const Card = styled.div`
   align-items: center;
 
   h2 {
-    font-size: 2rem;
+    font-size: 1.3rem;
     color: #1155cc;
     opacity: 90%;
     text-transform: uppercase;
@@ -92,7 +92,7 @@ const SearchMusic = () => {
       <ContainerPrimary>
         <Card>
           <ContainerInput>
-            <h2>Search Music</h2>
+            <h2>look for a clue music</h2>
             <input
               type="text"
               placeholder="Search"

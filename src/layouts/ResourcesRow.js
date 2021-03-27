@@ -74,6 +74,11 @@ const ContainerIconFavourite = styled.div`
   position: absolute;
   margin-left: 35%;
   margin-top: 34%;
+
+  :hover {
+    transition: 1s;
+    padding-top: 10px;
+  }
 `;
 
 const ResourcesRow = ({ data, title, activeItem, setActiveItem, maximum }) => {
@@ -112,9 +117,14 @@ const ResourcesRow = ({ data, title, activeItem, setActiveItem, maximum }) => {
           <FavouriteMusicIcon data={data} />
         </ContainerIconFavourite>
         {data.icons ? (
-          <img src={data.icons[0].url} alt="" />
+          <img
+            title={data.name}
+            src={data.icons[0].url}
+            alt=""
+            style={{ zIndex: "2" }}
+          />
         ) : (
-          <img src={data.images[0].url} alt="" />
+          <img title={data.name} src={data.images[0].url} alt="" />
         )}
         <p> {data.name} </p>
       </Card>

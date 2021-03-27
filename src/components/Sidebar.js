@@ -16,6 +16,7 @@ const ContainerIcon = styled.div`
   height: 120px;
   margin-top: 25px;
   text-align: center;
+
   cursor: pointer;
 `;
 
@@ -24,7 +25,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  height: auto;
+  height: 900px;
   margin-left: 10%;
   width: 80%;
 `;
@@ -92,7 +93,6 @@ const Sidebar = () => {
           activeStyle={{
             fontWeight: "bold",
             width: "125%",
-
             background: "linear-gradient(to right,#7974DD, transparent 95%)",
           }}
         >
@@ -100,7 +100,6 @@ const Sidebar = () => {
             <FontAwesomeIcon
               icon={faPlayCircle}
               size="2x"
-              name="history"
               style={{ height: "100px", color: "#fff" }}
             />
           </ContainerIcon>

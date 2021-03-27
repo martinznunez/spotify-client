@@ -6,9 +6,9 @@ import Sidebar from "./Sidebar";
 import styled from "styled-components";
 import FavouriteToStock from "../layouts/FavouriteToStock";
 
-// import { useHistory } from "react-router-dom";
+import PlayToMusic from "../layouts/PlayToMusic";
 
-import SearchMusic from "./SearchMusic";
+import SearchMusic from "../layouts/SearchMusic";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
@@ -45,6 +45,7 @@ const Routes = () => {
               <Route exact path="/home" component={Header} />
               <Route exact path="/search" component={SearchMusic} />
               <Route exact path="/favourite" component={FavouriteToStock} />
+              <Route exact path="/playmusic" component={PlayToMusic} />
             </ContainerHeader>
           </ContainerPrimary>
         </Switch>

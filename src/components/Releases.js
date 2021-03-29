@@ -35,13 +35,21 @@ const Releases = () => {
 
   useEffect(() => {
     const fetchCategories = async () => {
-      const result = await fetchCategory();
-      setCategories(result.data.categories.items);
+      try {
+        const result = await fetchCategory();
+        setCategories(result.data.categories.items);
+      } catch (error) {
+        console.log(error);
+      }
     };
 
     const fetchNewReleases = async () => {
-      const result = await fetchAlbumsReleases();
-      setReleases(result.data.albums.items);
+      try {
+        const result = await fetchAlbumsReleases();
+        setReleases(result.data.albums.items);
+      } catch (error) {
+        console.log(error);
+      }
     };
 
     const fetchPlayLists = async () => {

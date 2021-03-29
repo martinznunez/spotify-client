@@ -69,15 +69,15 @@ const PlayToMusic = () => {
 
         <audio
           style={{
-            backgroundColor: "#1b2426",
-            padding: "20px",
-            height: "100px",
+            padding: "10px",
+            width: "90%",
+            height: "72px",
           }}
           src={musicTrack}
           preload="true"
           type="audio/ogg"
           controls="controls"
-          autoplay="false"
+          autoPlay={true}
         ></audio>
         <MessageNoResultsFound errorClueMusic={errorClueMusic} />
         <ContainerList>

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import LogOut from "./LogOut";
 
 import { fetchCategory } from "../config/getCategory";
 import { fetchAlbumsReleases } from "../config/getAlbum";
@@ -66,7 +65,6 @@ const Releases = () => {
       <ContainerPrimary>
         <Title />
         <ContainerReleases>
-          <LogOut />
           <ResourcesRow
             data={releases[activeRelease]}
             maximum={releases}

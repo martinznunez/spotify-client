@@ -3,21 +3,21 @@ import styled from "styled-components";
 import { useHistory } from "react-router-dom";
 
 const LogOutButton = styled.button`
-  margin-left: 60%;
   font-size: 1rem;
   border-radius: 9px;
   padding: 5px;
-  border-color: red;
-  color: #1155cc;
-  opacity: 70%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   width: 90px;
   text-transform: uppercase;
-  margin-top: 10px;
-
   cursor: pointer;
+  transition: 0.25s;
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  color: #e4cb58;
 
   :hover {
-    opacity: 100%;
+    opacity: 70%;
   }
 `;
 

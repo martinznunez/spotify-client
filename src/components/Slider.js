@@ -9,7 +9,8 @@ const ContainerSlider = styled.div`
   width: 40%;
   flex-direction: row;
   align-items: center;
-  padding-top: 10px;
+  padding-top: 14px;
+
   justify-content: space-around;
 `;
 

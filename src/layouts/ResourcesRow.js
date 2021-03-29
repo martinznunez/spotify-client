@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
 import Slider from "../components/Slider";
+
 import FavouriteMusicIcon from "./FavouriteMusicIcon";
 
 const ContainerTitleSlider = styled.div`
@@ -8,13 +9,26 @@ const ContainerTitleSlider = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  width: 90%;
 
   span {
-    font-size: 4rem;
-    font-weight: 100;
+    width: 20px;
+    margin-top: 7px;
+    border-bottom: solid 2px;
     opacity: 20%;
-    margin-left: 10px;
+    margin-left: -10px;
+  }
+  @media screen and (min-width: 450px) {
+    width: 100%;
+  }
+  @media screen and (min-width: 840px) {
+    span {
+      font-weight: 100;
+      width: 200px;
+      border-bottom: solid 2px;
+      opacity: 20%;
+      margin-left: -10px;
+    }
   }
 `;
 
@@ -28,14 +42,21 @@ const ContainerTitle = styled.div`
   align-items: center;
 
   h2 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     opacity: 30%;
     padding-top: 5px;
-    width: 230px;
+    width: 200px;
     margin-left: 10px;
     text-transform: uppercase;
     color: #000;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  @media screen and (min-width: 700px) {
+    h2 {
+      width: 300px;
+    }
+    @media screen and (min-width: 840px) {
+    }
   }
 `;
 
@@ -68,20 +89,47 @@ const Card = styled.div`
     font-size: 0.5rem;
     text-decoration: none;
   }
+  @media screen and (min-width: 840px) {
+    img {
+      width: 270px;
+      height: 290px;
+    }
+  }
 `;
 
 const ContainerIconFavourite = styled.div`
   position: absolute;
-  margin-left: 35%;
-  margin-top: 34%;
+  margin-left: 40%;
+  margin-top: 40%;
 
   :hover {
     transition: 1s;
     padding-top: 10px;
   }
+  @media screen and (min-width: 450px) {
+    margin-left: 35%;
+    margin-top: 33%;
+  }
+  @media screen and (min-width: 530px) {
+    margin-left: 30%;
+    margin-top: 28%;
+  }
+  @media screen and (min-width: 615px) {
+    margin-top: 24%;
+  }
+  @media screen and (min-width: 700px) {
+    margin-top: 20%;
+    margin-left: 25%;
+  }
+  @media screen and (min-width: 840px) {
+    margin-top: 20%;
+    margin-left: 23%;
+  }
 `;
 
 const ResourcesRow = ({ data, title, activeItem, setActiveItem, maximum }) => {
+  const containerRef = useRef();
+
   const handleSetActiveCategory = (direction) => {
     if (activeItem === maximum.length - 1) {
       setActiveItem((activeItem) => activeItem - 1);
@@ -98,12 +146,22 @@ const ResourcesRow = ({ data, title, activeItem, setActiveItem, maximum }) => {
     }
   };
 
+  useEffect(() => {
+    if (containerRef.current) {
+      console.log(
+        "%c 🍉 containerRef.current: ",
+        "font-size:20px;background-color: #6EC1C2;color:#fff;",
+        containerRef.current.clientWidth
+      );
+    }
+  }, []);
+
   return (
-    <>
+    <div ref={containerRef}>
       <ContainerTitleSlider>
         <ContainerTitle>
           <h2>{title}</h2>
-          <span>-</span>
+          <span></span>
         </ContainerTitle>
         <Slider
           stepCallback={handleSetActiveCategory}
@@ -128,7 +186,7 @@ const ResourcesRow = ({ data, title, activeItem, setActiveItem, maximum }) => {
         )}
         <p> {data.name} </p>
       </Card>
-    </>
+    </div>
   );
 };
 

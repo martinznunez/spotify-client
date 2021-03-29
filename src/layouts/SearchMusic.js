@@ -45,7 +45,7 @@ const ContainerInput = styled.div`
 
   input {
     padding: 12px;
-    width: 100%;
+    width: 90%;
 
     border-radius: 6px;
   }

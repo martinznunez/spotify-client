@@ -34,6 +34,15 @@ const Card = styled.div`
     position: absolute;
     margin: 10rem 0 0 0;
   }
+  @media screen and (min-width: 800px) {
+    height: 430px;
+    width: 440px;
+    margin-top: 10%;
+
+    p {
+      font-size: 1.7rem;
+    }
+  }
 `;
 
 const ContainerLogin = styled.div`

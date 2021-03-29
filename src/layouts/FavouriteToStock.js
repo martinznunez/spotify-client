@@ -41,7 +41,7 @@ const Card = styled.div`
   span {
     position: absolute;
     margin-left: 60%;
-    z-index: -1;
+    z-index: 1;
   }
   @media screen and (min-width: 450px) {
     span {
@@ -86,10 +86,10 @@ const FavouriteToStock = () => {
     sinduplicados();
   }, [listFavourite, sinduplicados]);
 
-  const handClickDelate = (album) => {
-    const delate = listFavourite.filter((elem) => elem.id !== album.id);
+  const handClickDelete = (album) => {
+    const remove = listFavourite.filter((elem) => elem.id !== album.id);
 
-    setListFavourite(delate);
+    setListFavourite(remove);
   };
 
   return (
@@ -101,10 +101,10 @@ const FavouriteToStock = () => {
                 <p> {album.name} </p>
                 <span>
                   <FontAwesomeIcon
-                    onClick={() => handClickDelate(album)}
+                    onClick={() => handClickDelete(album)}
                     icon={faTrash}
                     size="1x"
-                    title="Delate"
+                    title="Delete"
                     transform="down-4 grow-2.5"
                     style={{
                       height: "80px",

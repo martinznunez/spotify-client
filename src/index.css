@@ -20,4 +20,22 @@ code {
     monospace;
 }
 
-/* reproductos */
+/* animacion user */
+
+@keyframes iconosani {
+  0% {
+    transform: perspective(800px) rotateX(-180deg);
+    opacity: 1;
+  }
+  40% {
+    transform: perspective(800px) rotateX(40deg);
+    opacity: 1;
+  }
+  70% {
+    transform: perspective(800px) rotateX(-50deg);
+  }
+  100% {
+    transform: perspective(800px) rotateX(0deg);
+    opacity: 1;
+  }
+}

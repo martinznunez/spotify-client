@@ -19,6 +19,16 @@ const ContainerHeaderTitle = styled.div`
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     color: #fff;
   }
+  @media screen and (min-width: 700px) {
+    h2 {
+      font-size: 1.9rem;
+    }
+    @media screen and (min-width: 840px) {
+      h2 {
+        font-size: 2.4rem;
+      }
+    }
+  }
 `;
 const Title = () => {
   return (

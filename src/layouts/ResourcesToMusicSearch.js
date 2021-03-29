@@ -33,13 +33,40 @@ const Card = styled.div`
 
 const ContainerIconFavourite = styled.div`
   position: absolute;
-  margin-left: 35%;
-  margin-top: 34%;
+  margin-left: 40%;
+  margin-top: 40%;
+
+  @media screen and (min-width: 450px) {
+    margin-left: 35%;
+    margin-top: 33%;
+  }
+  @media screen and (min-width: 530px) {
+    margin-left: 30%;
+    margin-top: 28%;
+  }
+  @media screen and (min-width: 615px) {
+    margin-left: 27%;
+    margin-top: 24%;
+  }
+  @media screen and (min-width: 700px) {
+    margin-left: 23%;
+    margin-top: 20%;
+  }
+  @media screen and (min-width: 840px) {
+    margin-left: 20%;
+    margin-top: 17%;
+  }
 `;
 
 const ContainerIconPlay = styled.div`
   position: absolute;
   margin-top: 20%;
+  @media screen and (min-width: 700px) {
+    margin-top: 18%;
+  }
+  @media screen and (min-width: 840px) {
+    margin-top: 10%;
+  }
 `;
 
 const ResourcesToMusicSearch = ({ musicSearch }) => {

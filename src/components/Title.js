@@ -10,8 +10,11 @@ const ContainerHeaderTitle = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
   margin: auto;
+
+  .logo {
+    display: none;
+  }
 
   h2 {
     font-size: 1.7rem;
@@ -28,12 +31,29 @@ const ContainerHeaderTitle = styled.div`
         font-size: 2.4rem;
       }
     }
+    @media screen and (min-width: 1200px) {
+      justify-content: space-around;
+      .logo {
+        display: block;
+        width: 30%;
+        img {
+          width: 250px;
+          height: auto;
+        }
+      }
+      h2 {
+        width: 60%;
+      }
+    }
   }
 `;
 const Title = () => {
   return (
     <>
       <ContainerHeaderTitle>
+        <div className="logo">
+          <img src="/assets/hero.svg" alt="" />
+        </div>
         <h2>
           Your Favourite tunes all{" "}
           <FontAwesomeIcon

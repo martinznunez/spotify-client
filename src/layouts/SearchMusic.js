@@ -33,6 +33,16 @@ const Card = styled.div`
     opacity: 90%;
     text-transform: uppercase;
   }
+  @media screen and (min-width: 1000px) {
+    h2 {
+      font-size: 2rem;
+    }
+  }
+  @media screen and (min-width: 1760px) {
+    h2 {
+      font-size: 2.3rem;
+    }
+  }
 `;
 
 const ContainerInput = styled.div`

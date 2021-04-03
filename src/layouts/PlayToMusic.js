@@ -32,6 +32,15 @@ const ContainerList = styled.div`
   background-color: #00ffff;
   border-radius: 20px;
 
+  h5 {
+    font-size: 1.2rem;
+    text-align: center;
+    padding-top: 10px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  }
+
   li {
     margin-top: 10px;
     list-style: none;
@@ -42,20 +51,29 @@ const ContainerList = styled.div`
     font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
     font-family: "Times New Roman", Times, serif;
   }
+  @media screen and (min-width: 1399px) {
+    li {
+      font-size: 1.4rem;
+      padding-bottom: 5px;
+    }
+    h5 {
+      font-size: 2rem;
+    }
+  }
 `;
 
 const PlayToMusic = () => {
   const { searchClue } = useContext(UserContext);
 
-  const [errorClueMusic, setErrorClueMusic] = useState(false);
+  const [errorSoundtrack, setErrorSoundtrack] = useState(false);
 
   const [musicTrack, setMusicTrack] = useState();
 
   const onclickAddMusicTrack = (music) => {
     if (!music.audio) {
-      setErrorClueMusic(true);
+      setErrorSoundtrack(true);
     } else {
-      setErrorClueMusic(false);
+      setErrorSoundtrack(false);
       setMusicTrack(music.audio);
     }
 
@@ -79,8 +97,10 @@ const PlayToMusic = () => {
           controls="controls"
           autoPlay={true}
         ></audio>
-        <MessageNoResultsFound errorClueMusic={errorClueMusic} />
+        <MessageNoResultsFound errorSoundtrack={errorSoundtrack} />
+
         <ContainerList>
+          <h5>your soundtrack</h5>
           <ul>
             {searchClue.map((music, index) =>
               music ? (

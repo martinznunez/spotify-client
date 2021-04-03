@@ -13,10 +13,10 @@ const ContainerMessageClueMusic = styled.div`
   }
 `;
 
-const MessageNoResultsFound = ({ errorClueMusic }) => {
-  return errorClueMusic ? (
+const MessageNoResultsFound = ({ errorSoundtrack }) => {
+  return errorSoundtrack ? (
     <ContainerMessageClueMusic>
-      <p> No results found the clue music</p>
+      <p> No results found for soundtrack</p>
     </ContainerMessageClueMusic>
   ) : null;
 };

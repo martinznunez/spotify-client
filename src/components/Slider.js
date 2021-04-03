@@ -10,11 +10,10 @@ const ContainerSlider = styled.div`
   flex-direction: row;
   align-items: center;
   padding-top: 14px;
-
   justify-content: space-around;
 `;
 
-const Slider = ({ stepCallback, activeStep, maximum }) => {
+const Slider = ({ stepCallback, maximum }) => {
   return (
     <ContainerSlider>
       <FontAwesomeIcon

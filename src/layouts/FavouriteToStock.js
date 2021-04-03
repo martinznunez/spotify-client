@@ -47,14 +47,23 @@ const Card = styled.div`
     span {
       margin-top: 2%;
     }
-    p {
-      font-size: 0, 8rem;
+  }
+  @media screen and (min-width: 500px) {
+    span {
+      margin-top: 1%;
+      margin-left: 50%;
     }
   }
   @media screen and (min-width: 615px) {
     span {
       margin-left: 40%;
       margin-top: 2%;
+    }
+  }
+  @media screen and (min-width: 700px) {
+    img {
+      width: 270px;
+      height: 260px;
     }
   }
   @media screen and (min-width: 840px) {
@@ -66,7 +75,43 @@ const Card = styled.div`
       margin-top: 1%;
     }
     img {
-      width: 260px;
+      width: 280px;
+      height: 270px;
+    }
+  }
+  @media screen and (min-width: 1000px) {
+    img {
+      width: 300px;
+      height: 290px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    img {
+      width: 340px;
+      height: 300px;
+    }
+    margin-bottom: 20%;
+  }
+  @media screen and (min-width: 1360px) {
+    img {
+      width: 360px;
+      height: 330px;
+    }
+    span {
+      margin-left: 30%;
+      margin-top: 1%;
+    }
+  }
+  @media screen and (min-width: 1700px) {
+    margin-bottom: 15%;
+  }
+  p {
+    font-size: 1.3rem;
+  }
+  @media screen and (min-width: 1830px) {
+    span {
+      margin-left: 20%;
+      margin-top: 0%;
     }
   }
 `;

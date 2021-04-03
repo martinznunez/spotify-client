@@ -11,6 +11,7 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
   margin-bottom: 30%;
 
   p {
@@ -28,6 +29,39 @@ const Card = styled.div`
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 10%;
+  }
+  @media screen and (min-width: 900px) {
+    img {
+      width: 270px;
+      height: 270px;
+      padding: 0px;
+    }
+    margin-bottom: 50%;
+  }
+  @media screen and (min-width: 1040px) {
+    p {
+      margin-bottom: 10px;
+    }
+    img {
+      width: 300px;
+      height: 300px;
+      padding: 0px;
+    }
+  }
+  @media screen and (min-width: 900px) {
+    img {
+      width: 280px;
+      height: 300px;
+    }
+    p {
+      margin-bottom: 20px;
+    }
+  }
+  @media screen and (min-width: 1170px) {
+    img {
+      width: 300px;
+      padding-bottom: 30px;
+    }
   }
 `;
 
@@ -55,6 +89,26 @@ const ContainerIconFavourite = styled.div`
   @media screen and (min-width: 840px) {
     margin-left: 20%;
     margin-top: 17%;
+  }
+  @media screen and (min-width: 900px) {
+    margin-left: 20%;
+    margin-top: 20%;
+  }
+  @media screen and (min-width: 1170px) {
+    margin-left: 18%;
+    margin-top: 17%;
+  }
+  @media screen and (min-width: 1170px) {
+    margin-left: 16%;
+    margin-top: 14%;
+  }
+  @media screen and (min-width: 1670px) {
+    margin-left: 14%;
+    margin-top: 12%;
+  }
+  @media screen and (min-width: 1900px) {
+    margin-left: 12%;
+    margin-top: 11%;
   }
 `;
 

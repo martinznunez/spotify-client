@@ -11,22 +11,12 @@ import ResourcesRow from "../layouts/ResourcesRow";
 const ContainerPrimary = styled.div`
   display: flex;
   flex-direction: column;
-  margin: auto;
-`;
 
-const ContainerReleases = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
+  overflow-x: hidden;
+  flex-basis: 100%;
 `;
 
 const Releases = () => {
-  const [activeCategory, setActiveCategory] = useState(0);
-  const [activeRelease, setActiveRelease] = useState(0);
-  const [activeFeaturePlayLists, setActiveFeaturePlayLists] = useState(0);
-
   const [searchFeasturedPlaylists, setSearchFeasturedPlaylists] = useState(
     null
   );
@@ -69,34 +59,25 @@ const Releases = () => {
   if (!categories || !releases || !searchFeasturedPlaylists) return null;
 
   return (
-    <>
-      <ContainerPrimary>
-        <Title />
-        <ContainerReleases>
-          <ResourcesRow
-            data={releases[activeRelease]}
-            maximum={releases}
-            title="Released this week"
-            activeItem={activeRelease}
-            setActiveItem={setActiveRelease}
-          />
-          <ResourcesRow
-            maximum={searchFeasturedPlaylists}
-            data={searchFeasturedPlaylists[activeFeaturePlayLists]}
-            title="featured PlayLists"
-            activeItem={activeFeaturePlayLists}
-            setActiveItem={setActiveFeaturePlayLists}
-          />
-          <ResourcesRow
-            maximum={categories}
-            data={categories[activeCategory]}
-            title="Browse"
-            activeItem={activeCategory}
-            setActiveItem={setActiveCategory}
-          />
-        </ContainerReleases>
-      </ContainerPrimary>
-    </>
+    <ContainerPrimary>
+      <Title />
+
+      <ResourcesRow
+        data={releases}
+        maximum={releases.length}
+        title="Released this week"
+      />
+      <ResourcesRow
+        data={searchFeasturedPlaylists}
+        maximum={searchFeasturedPlaylists.length}
+        title="featured PlayLists"
+      />
+      <ResourcesRow
+        maximum={categories.length}
+        data={categories}
+        title="Browse"
+      />
+    </ContainerPrimary>
   );
 };
 

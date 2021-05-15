@@ -17,9 +17,8 @@ const ContainerPrimary = styled.div`
 `;
 
 const Releases = () => {
-  const [searchFeasturedPlaylists, setSearchFeasturedPlaylists] = useState(
-    null
-  );
+  const [searchFeasturedPlaylists, setSearchFeasturedPlaylists] =
+    useState(null);
   const [categories, setCategories] = useState(null);
   const [releases, setReleases] = useState(null);
 

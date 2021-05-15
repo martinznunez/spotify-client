@@ -26,6 +26,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: space-around;
   height: 900px;
+
   margin-left: 10%;
   width: 80%;
 `;

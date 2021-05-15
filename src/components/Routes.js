@@ -26,6 +26,7 @@ const ContainerSidebar = styled.div`
 const ContainerHeader = styled.div`
   width: 70%;
   display: flex;
+
   flex-direction: row;
   @media screen and (min-width: 1200px) {
     width: 80%;
@@ -34,7 +35,9 @@ const ContainerHeader = styled.div`
 
 const ContainerPrimary = styled.div`
   width: 100%;
+
   display: flex;
+
   flex-direction: row;
 `;
 

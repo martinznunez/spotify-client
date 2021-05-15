@@ -9,14 +9,15 @@ const ContainerPrimary = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 30px;
   width: 90%;
-  margin-left: 20px;
-  margin-top: 10px;
+  min-height: 1200px;
+  margin-bottom: 20px;
   text-align: center;
+  margin: auto;
 `;
 const Card = styled.div`
   width: 100%;
-
   background: #34363e;
   height: 300px;
   border-radius: 8px;

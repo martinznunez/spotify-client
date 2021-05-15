@@ -9,6 +9,7 @@ const ContainerPrimary = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   width: 90%;
+
   margin: auto;
 `;
 

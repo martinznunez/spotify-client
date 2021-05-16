@@ -6,7 +6,7 @@ import FeatureToAddMusic from "./FeatureToAddMusic";
 
 const Card = styled.div`
   width: 100%;
-  height: 180px;
+  height: 210px;
   margin-top: 5px;
   display: flex;
   flex-direction: column;
@@ -15,7 +15,7 @@ const Card = styled.div`
   margin-bottom: 30%;
 
   p {
-    margin-top: 5px;
+    margin-top: 7px;
     font-size: 1rem;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
@@ -114,7 +114,7 @@ const ContainerIconFavourite = styled.div`
 
 const ContainerIconPlay = styled.div`
   position: absolute;
-  margin-top: 20%;
+  margin-top: 23%;
   @media screen and (min-width: 700px) {
     margin-top: 18%;
   }

@@ -21,9 +21,6 @@ const Card = styled.div`
     margin-top: 2rem;
     box-shadow: 0 10px 50px rgba(235, 25, 110, 1);
   }
-  p {
-    font-size: 1.5rem;
-  }
 
   @media screen and (min-width: 800px) {
     height: 430px;
@@ -37,13 +34,11 @@ const Card = styled.div`
 `;
 
 const Button = styled.button`
-  box-shadow: inset 0 0 0 4px #58cdd1;
-  color: #58afd1;
-
+  box-shadow: inset 0 0 0 1px #fff;
+  color: #f1f1f1;
   background: none;
   border: none;
   cursor: pointer;
-
   font: 700 1.2rem "Roboto Slab", sans-serif;
   padding: 1rem 2rem;
   letter-spacing: 0.2rem;
@@ -113,7 +108,6 @@ function Login() {
       <ContainerLogin>
         <Card>
           <img src="./assets/login.jpeg" alt="Person" className="card__image" />
-          <p>Sign up</p>
 
           <Button onClick={handleLogin}>Login</Button>
         </Card>

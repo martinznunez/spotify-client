@@ -17,7 +17,8 @@ const ContainerHeaderTitle = styled.div`
   }
 
   h2 {
-    font-size: 1.7rem;
+    font-size: 1.1rem;
+
     font-weight: 900;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     color: #fff;

@@ -4,36 +4,27 @@ import styled from "styled-components";
 import { getValueUrl } from "../utils/RouteGetToken";
 
 const Card = styled.div`
-  width: 90%;
-  margin-top: 20%;
-  background: #34363e;
-  height: 500px;
-  border-radius: 8px;
-  text-align: center;
+  background-color: #222831;
+  height: 37rem;
+  border-radius: 5px;
   display: flex;
-  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.9);
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.7);
+  color: white;
   img {
-    cursor: pointer;
-    width: 350px;
-    height: 330px;
+    height: 160px;
+    width: 160px;
     border-radius: 50%;
+    border: 5px solid #272133;
+    margin-top: 2rem;
+    box-shadow: 0 10px 50px rgba(235, 25, 110, 1);
   }
   p {
-    text-transform: uppercase;
-    letter-spacing: 0.5em;
-    font-size: 1.4rem;
-    display: inline-block;
-    color: #fff;
-    opacity: 50%;
-    border: 4px double rgba(255, 255, 255, 0.25);
-    border-width: 4px 0;
-    margin: auto;
-    position: absolute;
-    margin: 10rem 0 0 0;
+    font-size: 1.5rem;
   }
+
   @media screen and (min-width: 800px) {
     height: 430px;
     width: 440px;
@@ -45,11 +36,34 @@ const Card = styled.div`
   }
 `;
 
+const Button = styled.button`
+  box-shadow: inset 0 0 0 4px #58cdd1;
+  color: #58afd1;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  font: 700 1.2rem "Roboto Slab", sans-serif;
+  padding: 1rem 2rem;
+  letter-spacing: 0.2rem;
+  margin: 5rem;
+  width: 13rem;
+
+  :hover {
+    color: #ffe593;
+  }
+`;
+
 const ContainerLogin = styled.div`
-  display: flex;
+  display: grid;
+
+  grid-gap: 50px;
   justify-content: center;
   align-items: center;
-  margin: auto;
+
+  height: 100vh;
+  background-color: #f5f5f5;
 `;
 
 function Login() {
@@ -98,8 +112,10 @@ function Login() {
     <>
       <ContainerLogin>
         <Card>
-          <p>iniciar sesión</p>
-          <img src="/assets/login.jpeg" alt="" onClick={handleLogin} />
+          <img src="./assets/login.jpeg" alt="Person" className="card__image" />
+          <p>Sign up</p>
+
+          <Button onClick={handleLogin}>Login</Button>
         </Card>
       </ContainerLogin>
     </>

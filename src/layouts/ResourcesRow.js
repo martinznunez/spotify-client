@@ -104,7 +104,7 @@ const Card = styled.div`
     height: 300px;
   }
   img {
-    width: 270px;
+    width: 230px;
     height: 260px;
   }
   @media screen and (min-width: 610px) {
@@ -201,17 +201,18 @@ const Card = styled.div`
 const ContainerIconFavourite = styled.div`
   position: absolute;
   margin-left: 55%;
-  margin-top: 50%;
+  margin-top: 60%;
 
   :hover {
     transition: 1s;
     padding-top: 10px;
   }
   @media screen and (min-width: 500px) {
-    margin-top: 55%;
+    margin-top: 50%;
   }
   @media screen and (min-width: 560px) {
-    margin-top: 50%;
+    margin-top: 45%;
+    margin-left: 40%;
   }
   @media screen and (min-width: 720px) {
     margin-top: 18%;

@@ -31,3 +31,5 @@ Obtener una lista de favoritos
 ### ` Lo que ya se ha hecho`
 
 UI / UX para todos los elementos, incluidas las vistas previas (adaptables a dispositivos móviles)
+
+### demo https://clientespotify-react.web.app/
